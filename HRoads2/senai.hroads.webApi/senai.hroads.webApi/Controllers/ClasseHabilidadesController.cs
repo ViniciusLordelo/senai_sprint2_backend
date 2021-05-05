@@ -13,51 +13,57 @@ namespace senai.hroads.webApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class ClassController : ControllerBase
+    public class ClasseHabilidadesController : ControllerBase
     {
-        private IClass _IClass { get; set; }
+        private IClassHabilidades _IClassHabilidades { get; set; }
 
-        public ClassController()
+        public ClasseHabilidadesController()
         {
-            _IClass = new ClassRepository();
+            _IClassHabilidades = new ClassHabilidadeRepository();
         }
         [HttpGet]
+
         public IActionResult Get()
         {
-            return Ok(_IClass.ListarClasses());
+            return Ok(_IClassHabilidades.ListarClasseHabilidades());
         }
 
         [HttpGet("{id}")]
+
         public IActionResult GetById(int id)
         {
-            return Ok(_IClass.BuscarPorId(id));
+            return Ok(_IClassHabilidades.BuscarPorId(id));
         }
 
         [HttpPost]
-        public IActionResult Post(Class NovaClass)
+
+        public IActionResult Post(ClassesHabilidade NovaClassHabilidade)
         {
-            _IClass.CadastrarClasses(NovaClass);
+            _IClassHabilidades.CadastrarClasseHabilidades(NovaClassHabilidade);
 
             return StatusCode(201);
 
 
         }
 
-        [HttpPut("{id}")]
-        public IActionResult Put(int id, Class ClassAtualizada)
+        [HttpPut("id")]
+
+        public IActionResult Put(int id, ClassesHabilidade ClassHabilidadeAtualizada)
         {
-            _IClass.AtualizarClasses(id, ClassAtualizada);
+            _IClassHabilidades.AtualizarClasseHabilidades(id, ClassHabilidadeAtualizada);
 
             return StatusCode(204);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("id")]
+
         public IActionResult Delete(int id)
         {
-            _IClass.DeletarClasses(id);
+           _IClassHabilidades.DeletarClasseHabilidades(id);
 
             return StatusCode(204);
         }
 
     }
 }
+

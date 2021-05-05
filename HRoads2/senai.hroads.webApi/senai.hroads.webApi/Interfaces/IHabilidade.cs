@@ -16,7 +16,7 @@ namespace senai.hroads.webApi.Interfaces
 
         void DeletarHabilidades(int id);
 
-        void AtualizarHabilidades(int id, Class HabilidadesAtualizada);
+        void AtualizarHabilidades(int id, Habilidade HabilidadesAtualizada);
 
     }
 }

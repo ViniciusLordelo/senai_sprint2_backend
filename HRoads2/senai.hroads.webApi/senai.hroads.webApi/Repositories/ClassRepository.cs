@@ -15,9 +15,9 @@ namespace senai.hroads.webApi.Repositories
         {
             Class ClassBuscada = ctx.Classes.Find(id);
 
-            if (ClassAtualizada.ClassesHabilidades == null)
+            if (ClassAtualizada.Nome != null)
             {
-                ClassBuscada.ClassesHabilidades = ClassAtualizada.ClassesHabilidades;
+                ClassBuscada.Nome = ClassAtualizada.Nome;
 
                 ctx.Classes.Update(ClassBuscada);
 

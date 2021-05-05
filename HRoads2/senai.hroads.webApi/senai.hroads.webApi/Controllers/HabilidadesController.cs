@@ -13,51 +13,57 @@ namespace senai.hroads.webApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class ClassController : ControllerBase
+    public class HabilidadesController : ControllerBase
     {
-        private IClass _IClass { get; set; }
+        private IHabilidade _IHabilidades { get; set; }
 
-        public ClassController()
+        public HabilidadesController()
         {
-            _IClass = new ClassRepository();
+            _IHabilidades = new HabilidadesRepository();
         }
         [HttpGet]
+
         public IActionResult Get()
         {
-            return Ok(_IClass.ListarClasses());
+            return Ok(_IHabilidades.ListarHabilidades());
         }
 
         [HttpGet("{id}")]
+
         public IActionResult GetById(int id)
         {
-            return Ok(_IClass.BuscarPorId(id));
+            return Ok(_IHabilidades.BuscarPorId(id));
         }
 
         [HttpPost]
-        public IActionResult Post(Class NovaClass)
+
+        public IActionResult Post(Habilidade NovaHabilidade)
         {
-            _IClass.CadastrarClasses(NovaClass);
+            _IHabilidades.CadastrarHabilidades(NovaHabilidade);
 
             return StatusCode(201);
 
 
         }
 
-        [HttpPut("{id}")]
-        public IActionResult Put(int id, Class ClassAtualizada)
+        [HttpPut("id")]
+
+        public IActionResult Put(int id, Habilidade HabilidadeAtualizada)
         {
-            _IClass.AtualizarClasses(id, ClassAtualizada);
+            _IHabilidades.AtualizarHabilidades(id, HabilidadeAtualizada);
 
             return StatusCode(204);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("id")]
+
         public IActionResult Delete(int id)
         {
-            _IClass.DeletarClasses(id);
+            _IHabilidades.DeletarHabilidades(id);
 
             return StatusCode(204);
         }
 
     }
 }
+    
