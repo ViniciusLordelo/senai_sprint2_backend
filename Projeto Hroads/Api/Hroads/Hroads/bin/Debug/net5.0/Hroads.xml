@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hroads</name>
+    </assembly>
+    <members>
+        <member name="M:Hroads.Controllers.ClassController.Post(Hroads.Domains.Class)">
+            <summary>
+            Cadastra uma nova classe
+            </summary>
+            <param name="ClassNovo">Objeto do tipo Class</param>
+            <returns>Status Code 201 - Created</returns>
+        </member>
+        <member name="M:Hroads.Controllers.ClassController.Get">
+            <summary>
+            Lista todas as classes
+            </summary>
+            <returns>Uma lista de classes</returns>
+        </member>
+        <member name="M:Hroads.Controllers.ClassController.GetById(System.Int32)">
+            <summary>
+            Busca pelo ID
+            </summary>
+            <param name="Id">Id da classe buscada</param>
+            <returns>Status Code 200 - Ok E Uma classe</returns>
+        </member>
+        <member name="M:Hroads.Controllers.ClassController.Put(Hroads.Domains.Class,System.Int32)">
+            <summary>
+            Atualiza uma classe
+            </summary>
+            <param name="ClassAtualizado">Objeto do tipo Class contendo as novas informações</param>
+            <param name="Id">Id da classe buscada</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.ClassController.Delete(System.Int32)">
+            <summary>
+            Exclui uma classe
+            </summary>
+            <param name="Id">Id da classe buscada</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.HabilidadeClassController.Post(Hroads.Domains.HabilidadeClass)">
+            <summary>
+            Cadastra uma nova HabilidadeClass
+            </summary>
+            <param name="HabilidadeClassNovo">Objeto do tipo HabilidadeClass</param>
+            <returns>Status Code 201 - Created</returns>
+        </member>
+        <member name="M:Hroads.Controllers.HabilidadeClassController.Get">
+            <summary>
+            Lista todas as classes de habilidades
+            </summary>
+            <returns>Uma lista de classes de hablidades</returns>
+        </member>
+        <member name="M:Hroads.Controllers.HabilidadeClassController.GetById(System.Int32)">
+            <summary>
+            Busca pelo Id
+            </summary>
+            <param name="Id">Id da classe de habilidade buscada</param>
+            <returns>Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:Hroads.Controllers.HabilidadeClassController.Put(Hroads.Domains.HabilidadeClass,System.Int32)">
+            <summary>
+            Atualiza uma classe de habilidade
+            </summary>
+            <param name="HabilidadeClassAtualizado">Objeto do tipo HabilidadeClass contendo as novas informações</param>
+            <param name="Id">Id da classe de habilidade buscada</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.HabilidadeClassController.Delete(System.Int32)">
+            <summary>
+            Exclui uma classe de habilidade
+            </summary>
+            <param name="Id">Id da classe de habilidade buscada</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.HabilidadeController.Post(Hroads.Domains.Habilidade)">
+            <summary>
+            Cadastra uma nova habilidade
+            </summary>
+            <param name="HabilidadeNovo">Objeot do tipo Habilidade</param>
+            <returns>Status Code 201 - Created</returns>
+        </member>
+        <member name="M:Hroads.Controllers.HabilidadeController.Get">
+            <summary>
+            Lista todas as habilidades
+            </summary>
+            <returns>Uma lista de habilidades</returns>
+        </member>
+        <member name="M:Hroads.Controllers.HabilidadeController.GetById(System.Int32)">
+            <summary>
+            Busca uma habilidade pelo Id
+            </summary>
+            <param name="Id">Id da hablidade bsucada</param>
+            <returns>Uma hablidade E Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:Hroads.Controllers.HabilidadeController.Put(Hroads.Domains.Habilidade,System.Int32)">
+            <summary>
+            Atualiza uma habilidade
+            </summary>
+            <param name="HabilidadeNovo">Objeto tipo Habilidade contendo as novas informações</param>
+            <param name="Id">Id da hablidade bsucada</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.HabilidadeController.Delete(System.Int32)">
+            <summary>
+            Exclui um tipo de habilidade
+            </summary>
+            <param name="Id">Id da hablidade bsucada</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.LoginController.Post(Hroads.ViewModels.LoginViewModel)">
+            <summary>
+            Válida o email e senha para efetuar login E Gera um token caso o login seja efetuado
+            </summary>
+            <param name="login">Objeto do tipo LoginViewModel</param>
+            <returns>Status Code 200 - Ok E Token</returns>
+        </member>
+        <member name="M:Hroads.Controllers.PersonagenController.Post(Hroads.Domains.Personagen)">
+            <summary>
+            Cadastra um novo personagem
+            </summary>
+            <param name="PersonagenNovo">Objeto tipo Personagen</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hroads.Controllers.PersonagenController.Get">
+            <summary>
+            lista todos os personagens
+            </summary>
+            <returns>Uma lista de personagens E Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:Hroads.Controllers.PersonagenController.GetById(System.Int32)">
+            <summary>
+            Busca um personagem pelo IE
+            </summary>
+            <param name="Id">Id do personagem buscado</param>
+            <returns>Um personagem E Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:Hroads.Controllers.PersonagenController.Put(Hroads.Domains.Personagen,System.Int32)">
+            <summary>
+            Atualiza um personagem
+            </summary>
+            <param name="PersonagenNovo">objeot do tipo Personagen contendo as novas informações</param>
+            <param name="Id">Id do personagem bsucado</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.PersonagenController.Delete(System.Int32)">
+            <summary>
+            Exclui um personagem
+            </summary>
+            <param name="Id">Id do personagem bsucado</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.TipoHabilidadeController.Post(Hroads.Domains.TipoHabilidade)">
+            <summary>
+            Cadastra um novo tipo de habilidade
+            </summary>
+            <param name="TipoHabilidadeNovo">Objeto do tipo TipoHabilidade</param>
+            <returns>Status Code 201 - Created</returns>
+        </member>
+        <member name="M:Hroads.Controllers.TipoHabilidadeController.Get">
+            <summary>
+            Lista todos os tipos de habilidade
+            </summary>
+            <returns>Uma lista de tipos de habilidades</returns>
+        </member>
+        <member name="M:Hroads.Controllers.TipoHabilidadeController.GetById(System.Int32)">
+            <summary>
+            Busca um tipo de habilidade pelo Id
+            </summary>
+            <param name="Id">Id do tipo de habilidade buscado</param>
+            <returns>Um tipo de habilidade E Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:Hroads.Controllers.TipoHabilidadeController.Put(Hroads.Domains.TipoHabilidade,System.Int32)">
+            <summary>
+            Atualiza um tipo de habilidade
+            </summary>
+            <param name="TipoHabilidadeAtualizado">Objeot do tipo TipoHabilidade contendo as novas informações</param>
+            <param name="Id">Id do tipo de hablidade buscado</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.TipoHabilidadeController.Delete(System.Int32)">
+            <summary>
+            Exclui um tipo de habilidade
+            </summary>
+            <param name="Id">Id do tipo de hablidade buscado</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.TipoUsuarioController.Post(Hroads.Domains.TipoUsuario)">
+            <summary>
+            Cadastra um novo tipo de usuário
+            </summary>
+            <param name="TipoUsuarioNovo">Objeto do tipo TipoUsuario</param>
+            <returns>Status Code 201 - Created</returns>
+        </member>
+        <member name="M:Hroads.Controllers.TipoUsuarioController.Get">
+            <summary>
+            Lista todos os tipos de usuário
+            </summary>
+            <returns>Uma lista de tipos de usuário</returns>
+        </member>
+        <member name="M:Hroads.Controllers.TipoUsuarioController.GetById(System.Int32)">
+            <summary>
+            Busca um tipo de usuário
+            </summary>
+            <param name="Id">Id do tipo de usuário buscado</param>
+            <returns>Um tipo de usuário</returns>
+        </member>
+        <member name="M:Hroads.Controllers.TipoUsuarioController.Put(Hroads.Domains.TipoUsuario,System.Int32)">
+            <summary>
+            Atualiza um tipo de usuário
+            </summary>
+            <param name="TipoUsuarioAtualizado">Objeto do tipo TipoUsuario contendo as novas informações</param>
+            <param name="Id">Id do tipo de usuário buscado</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.TipoUsuarioController.Delete(System.Int32)">
+            <summary>
+            Exclui um tipo de usuário
+            </summary>
+            <param name="Id">Id do tipo de usuário buscado</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.UsuarioController.Post(Hroads.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="UsuarioNovo">Objeto do tipo Usuario</param>
+            <returns>Status Code 201 - Created</returns>
+        </member>
+        <member name="M:Hroads.Controllers.UsuarioController.Get">
+            <summary>
+            Lista os usuários
+            </summary>
+            <returns>Uma lista de usuários</returns>
+        </member>
+        <member name="M:Hroads.Controllers.UsuarioController.GetById(System.Int32)">
+            <summary>
+            Busca um usuário pelo ID
+            </summary>
+            <param name="Id">Id do usuário buscado</param>
+            <returns>Um usuário E Status Code 200 - Ok</returns>
+        </member>
+        <member name="M:Hroads.Controllers.UsuarioController.Put(Hroads.Domains.Usuario,System.Int32)">
+            <summary>
+            Atualiza um usuário
+            </summary>
+            <param name="UsuarioAtualizado"></param>
+            <param name="Id">Id do usuário buscado</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Controllers.UsuarioController.Delete(System.Int32)">
+            <summary>
+            Exclui um usuário
+            </summary>
+            <param name="Id">Id do usuário buscado</param>
+            <returns>Status Code 204 - No Content</returns>
+        </member>
+        <member name="M:Hroads.Repositories.HabilidadeRepository.Create(Hroads.Domains.Habilidade)">
+            <summary>
+            Cria uma nova Habilidade
+            </summary>
+            <param name="NovoHabilidade">A nova Habilidade que será criada</param>
+        </member>
+        <member name="M:Hroads.Repositories.HabilidadeRepository.Delete(System.Int32)">
+            <summary>
+            Deleta uma Habilidade
+            </summary>
+            <param name="Id">Id da Habilidade que será deletada</param>
+        </member>
+        <member name="M:Hroads.Repositories.HabilidadeRepository.Read">
+            <summary>
+            Busca todas as Habilidades
+            </summary>
+            <returns>Uma lista de Habilidades</returns>
+        </member>
+        <member name="M:Hroads.Repositories.HabilidadeRepository.ReadById(System.Int32)">
+            <summary>
+            Busca uma Habilidade pelo Id
+            </summary>
+            <param name="Id">Id da Habilidade buscada</param>
+            <returns>Habilidade buscada</returns>
+        </member>
+        <member name="M:Hroads.Repositories.HabilidadeRepository.Update(Hroads.Domains.Habilidade,System.Int32)">
+            <summary>
+            Método para atualizar Habilidade
+            </summary>
+            <param name="HabilidadeAtualizado">Objeto contendo as novas infos de Habilidade</param>
+            <param name="Id">Id da Habilidade buscada</param>
+        </member>
+        <member name="M:Hroads.Repositories.UsuarioRepository.Create(Hroads.Domains.Usuario)">
+            <summary>
+            
+            </summary>
+            <param name="NovoUsuario"></param>
+        </member>
+        <member name="M:Hroads.Repositories.UsuarioRepository.Delete(System.Int32)">
+            <summary>
+            E
+            </summary>
+            <param name="Id"></param>
+        </member>
+        <member name="M:Hroads.Repositories.UsuarioRepository.Read">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Uma lista de usuários</returns>
+        </member>
+        <member name="M:Hroads.Repositories.UsuarioRepository.ReadById(System.Int32)">
+            <summary>
+            Busca um usuário pelo Id
+            </summary>
+            <param name="Id">Id do usuário que será buscado</param>
+            <returns>Um usuário</returns>
+        </member>
+        <member name="M:Hroads.Repositories.UsuarioRepository.Update(Hroads.Domains.Usuario,System.Int32)">
+            <summary>
+            Método para atualizar um usuário
+            </summary>
+            <param name="UsuarioAtualizado">Usuário contendo as novas informações</param>
+            <param name="Id">Id do usuário que será atualizado</param>
+        </member>
+    </members>
+</doc>

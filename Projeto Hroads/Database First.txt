@@ -1,0 +1,21 @@
+Pacotes nescessários:
+
+Microsoft.EntityFrameworkCore.SqlServer
+
+Microsoft.EntityFrameworkCore.Design
+
+Microsoft.EntityFrameworkCore.Tools
+
+
+VS 2019:
+
+Startup:
+	Add.Controllers
+	endpoints.MapControllers
+
+
+Scaffold-DbContext "Data Source=PC-DA-XUXA; Initial Catalog= SENAI_HROADS_MANHA; Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Domains -ContextDir Contexts -Context SENAI_HROADSContext
+
+CRUD:
+
+Tipos de usuário, Usuários, Classes,
